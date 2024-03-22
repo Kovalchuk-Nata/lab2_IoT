@@ -18,11 +18,8 @@ python -m venv venv
 Встановіть необхідні бібліотеки, виконавши команди:
 
 ```bash
-pip install fastapi
-pip install "uvicorn[standard]"
-pip install SQLAlchemy
-pip install psycopg2
-pip install pydantic
+pip install paho-mqtt==1.6.1 # mqtt client
+pip install marshmallow # for schema and converting object to json
 ```
 
 Після встановлення всіх необхідних залежностей збережіть їх у файл requirements.txt, використовуючи команду:
@@ -36,4 +33,4 @@ pip freeze > requirements.txt
 cd docker
 docker-compose up --build
 ```
- Перевірка працездатності в Swagger (127.0.0.1:8000/docs) та в PgAdmin (127.0.0.1:5050)
+ Перевірка працездатності в MQTT

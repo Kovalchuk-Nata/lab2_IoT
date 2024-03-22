@@ -1,6 +1,7 @@
 # lab2_IoT
 - Для зберігання та доступу до даних потрібно реалізувати Store api який буде зберігати проаналізовані дані в базу даних. Також потрібно реалізувати спосіб отримання нових даних для UI клієнтів.
 
+
 ## Конфігурація та налаштування проекту
 
 ### 1. Створення віртуального середовища
@@ -18,8 +19,11 @@ python -m venv venv
 Встановіть необхідні бібліотеки, виконавши команди:
 
 ```bash
-pip install paho-mqtt==1.6.1 # mqtt client
-pip install marshmallow # for schema and converting object to json
+pip install fastapi
+pip install "uvicorn[standard]"
+pip install SQLAlchemy
+pip install psycopg2
+pip install pydantic
 ```
 
 Після встановлення всіх необхідних залежностей збережіть їх у файл requirements.txt, використовуючи команду:
@@ -33,4 +37,5 @@ pip freeze > requirements.txt
 cd docker
 docker-compose up --build
 ```
- Перевірка працездатності в MQTT
+ Перевірка працездатності в Swagger (127.0.0.1:8000/docs) та в PgAdmin (127.0.0.1:5050)
+
